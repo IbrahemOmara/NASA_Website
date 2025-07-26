@@ -156,6 +156,20 @@ margin: 20px;
 }
 
 
+.up{
+    display: flex;
+    flex-direction: row;
+
+}
+.about-pic{
+    padding: 50px;
+
+}
+.up img{
+    height: 450px;
+    width: 400px;
+}
+
 /* end about sec */
 
 
@@ -389,7 +403,7 @@ margin: 20px;
 
 .footer-logo img {
     height: 200px;
-    width: 500px;
+    width: 400px;
     filter: hue-rotate(125deg);
 }
 
@@ -572,6 +586,23 @@ header {
 
 .feature-text {
     padding-left: 0;
+}
+.up{
+flex-wrap: wrap;
+
+}
+.about-pic{
+    padding: 20px;
+
+}
+.up img{
+    height: 200px;
+    width: 200px;
+}
+.footer-logo img {
+    height: 100px;
+    width: 200px;
+    filter: hue-rotate(125deg);
 }
 
 .logo-group img {
