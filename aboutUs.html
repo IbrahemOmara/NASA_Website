@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="aboutus.css">
+    <!-- AOS CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="./images/1.png" type="image/x-icon">
+    <title>ABOUT US -NASA-TECHNOLOGY</title>
+</head>
+<body>
+
+    <header id="mainHeader">
+        <a href="index.html" class="logo"><img src="/images/Artboard 1 copy.png" alt=""></a>
+        <nav class="navigation">
+            <a href="index.html#services" href="#services">Services</a>
+            <a href="#projects">Projects</a>
+            <a href="aboutUs.html">About Us</a>
+        </nav>
+
+    </header>
+    <!-- star Background -->
+    <div class="cosmos-background">
+    <!-- Canvas for Code Background -->
+    <canvas id="codeRain"></canvas>
+    </div>
+
+    <section class="about-us">
+        <div class="about-container">
+            <h2 class="title">About Us</h2>
+            <div class="about-data">
+                <p>At <span>Nasa Technology,</span><br>
+                    we are passionate about transforming ideas into powerful digital experiences.<br>
+                    We specialize in *website design, **mobile applications, and **custom software systems*, tailored to meet the unique needs of each client — whether you’re a startup or an established enterprise.<br>
+                    With a focus on scalability, performance, and user experience, we build smart, modern solutions that drive results.<br>
+                    Our team consists of skilled developers, designers, and system architects working with cutting-edge tools and technologies.<br>
+                    We don’t just build websites or apps — we build *digital ecosystems* that grow with your business.
+                </p>
+                <p>
+                    <span> 🔭 *Our Vision*</span><br>
+
+                    To become a leading digital solutions provider in the region, empowering businesses with technology that inspires growth, innovation, and impact.
+
+                </p>
+                <p>
+                    <span> 🎯 *Our Mission*</span><br>
+
+                    To deliver top-tier, tailor-made web and software solutions using modern technologies — helping our clients thrive in the digital age through creative thinking, efficient execution, and long-term support.
+                </p>
+            </div>
+            <div class="container footer-content">
+                <!-- الجزء الأول: اللوجو -->
+                <div class="footer-logo">
+                <img src="./images/Artboard 1 copy.png" alt="Logo" />
+                </div>
+                <!-- الجزء الثالث: الفورم -->
+                <div class="footer-form">
+                <h3>Contact us</h3>
+                <form id="contactForm" action="https://formsubmit.co/hemaomara11@gmail.com" method="POST">
+                <input type="hidden" name="_subject" value="رسالة جديدة من موقع الشركة">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_template" value="table">
+
+                <input type="text" name="name" placeholder="Name" required>
+                <input type="tel" name="phone" placeholder="Phone" required>
+                <input type="email" name="email" placeholder="E-mail" required>
+                <textarea name="message" placeholder="Your messages..........!!" required></textarea>
+                <button type="submit">Send</button>
+                </form>
+
+                </div>
+            </div>
+                            <!-- الجزء الثاني: نبذة وكروت التواصل -->
+                <div class="footer-about">
+                
+                <div class="contact-cards">
+                    <div class="contact-card">
+                    <i class="fas fa-phone"></i>
+                    <span>+20 1027983476</span>
+                    </div>
+                    <div class="contact-card">
+                    <i class="fas fa-envelope"></i>
+                    <span>nasatechnology158@gmail.com</span>
+                    </div>
+                    <div class="contact-card">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Cairo ,EG</span>
+                    </div>
+                </div>
+                </div>
+
+        </div>
+    </section>
+
+    <section class="project-section" id="projects">
+        <h2 class="title">Our Projects</h2>
+
+        <div class="all-cards">
+            <div class="project-card" data-aos="fade-up" data-aos-delay="200"
+            onmouseenter="pauseSlider(this)"
+            onmouseleave="resumeSliderAndReset(this)"
+            onclick="flipCard(this)">
+            <div class="project-card-inner">
+            <!-- Front side -->
+            <div class="project-card-front">
+            <div class="project-slider">
+                <img src="/projects/p1/Screenshot 2025-07-25 at 1.29.07 AM.png" class="project-slide active" />
+                <img src="/projects/p1/Screenshot 2025-07-25 at 1.29.27 AM.png" class="project-slide" />
+                <img src="/projects/p1/Screenshot 2025-07-25 at 1.29.40 AM.png" class="project-slide" />
+            </div>
+            </div>
+
+            <!-- Back side -->
+            <div class="project-card-back">
+            <h3>اسم المشروع</h3>
+            <p>دي معلومات المشروع. هنا ممكن تكتب وصف مختصر أو تفاصيل مختارة.</p>
+            </div>
+        </div>
+        </div>
+
+
+        <div class="project-card" data-aos="fade-up" data-aos-delay="200"
+            onmouseenter="pauseSlider(this)"
+            onmouseleave="resumeSliderAndReset(this)"
+            onclick="flipCard(this)">
+        <div class="project-card-inner">
+            <!-- Front side -->
+            <div class="project-card-front">
+            <div class="project-slider">
+                <img src="/projects/p5/Screenshot 2025-07-25 at 5.40.17 AM.png" class="project-slide active" />
+                <img src="/projects/p5/Screenshot 2025-07-25 at 5.40.50 AM.png" class="project-slide" />
+                <img src="/projects/p5/Screenshot 2025-07-25 at 5.40.58 AM.png" class="project-slide" />
+            </div>
+            </div>
+
+            <!-- Back side -->
+            <div class="project-card-back">
+            <h3>اسم المشروع</h3>
+            <p>دي معلومات المشروع. هنا ممكن تكتب وصف مختصر أو تفاصيل مختارة.</p>
+            </div>
+        </div>
+        </div>
+
+        <div class="proj-page">
+            <a class="" href="allProjects.html"> Explore Now --> </a>
+        </div>
+        </div>
+        
+
+    </section>
+
+
+    <!-- شركاء النجاح  -->
+    <section class="partners-section">
+            <h2 class="title"data-translate="partenersTitle">Our development partners</h2>
+            <p>Hand in hand towards the future</p>
+
+            <div class="partners-wrapper">
+                <div class="partners-track">
+                <div class="logo-group">
+                    <img src="./Our-success-Parteners/2023-06-14-6489ad5b983e7.png" alt="Cinque Terre">
+                    <img src="./Our-success-Parteners/202505081032170.LOGO_PALM.png" alt="Forest">
+                    <img src="./Our-success-Parteners/logo-BZZiPrII.png" alt="Northern Lights">
+                    <img src="./Our-success-Parteners/logo.9ae37e1fd8c1f12668e1.png" alt="Mountains">
+                    <img src="./Our-success-Parteners/NewLogo.png" alt="Mountains">
+                    <img src="./Our-success-Parteners/NasrCity_6fa28f05f6d8ac1c20d64b6ae31acc6d.png" alt="Mountains">
+                    <img src="./Our-success-Parteners/White-logo.png" alt="Mountains">
+                </div>
+                <div class="logo-group">
+                    <img src="./Our-success-Parteners/2023-06-14-6489ad5b983e7.png" alt="Cinque Terre">
+                    <img src="./Our-success-Parteners/202505081032170.LOGO_PALM.png" alt="Forest">
+                    <img src="./Our-success-Parteners/logo-BZZiPrII.png" alt="Northern Lights">
+                    <img src="./Our-success-Parteners/logo.9ae37e1fd8c1f12668e1.png" alt="Mountains">
+                    <img src="./Our-success-Parteners/NewLogo.png" alt="Mountains">
+                    <img src="./Our-success-Parteners/NasrCity_6fa28f05f6d8ac1c20d64b6ae31acc6d.png" alt="Mountains">
+                    <img src="./Our-success-Parteners/White-logo.png" alt="Mountains">
+                </div>
+                </div>
+            </div>
+    </section>
+
+
+
+
+
+    <footer class="footer" id="contactUs">
+            <div class="footer-social">
+                <div class="social-links">
+                    <a href="" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="" target="_blank"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+            <p data-translate="copyright">Powerd by NASA Technology © 2024 .</p>
+            </div>
+    </footer>
+
+
+    <script src="slider.js">
+    </script>
+    <script src="bg1code.js">
+    </script>
+    <!-- AOS JS -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+    AOS.init();
+    window.addEventListener('scroll', function () {
+        const header = document.getElementById('mainHeader');
+        if (window.scrollY > 50) {
+        header.classList.add('scrolled');
+        } else {
+        header.classList.remove('scrolled');
+        }
+    });
+</script>
+</body>
+</html>

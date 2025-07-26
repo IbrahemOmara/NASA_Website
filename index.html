@@ -13,12 +13,12 @@
 </head>
 <body>
 
-    <header>
+    <header id="mainHeader">
         <a href="" class="logo"><img src="/images/Artboard 1 copy.png" alt=""></a>
         <nav class="navigation">
             <a href="#services">Services</a>
             <a href="#projects">Projects</a>
-            <a href="#contactUs">Contact</a>
+            <a href="aboutUs.html">About Us</a>
         </nav>
 
     </header>
@@ -499,16 +499,9 @@
 
     <footer class="footer" id="contactUs">
             <div class="container footer-content">
-                <!-- الجزء الأول: اللوجو -->
-                <div class="footer-logo">
-                <img src="./images/Artboard 1 copy.png" alt="Logo" />
-                </div>
 
                 <!-- الجزء الثاني: نبذة وكروت التواصل -->
                 <div class="footer-about">
-                <h3>About the Company</h3>
-                <p>We are a team of passionate individuals who aim to make everyone's life easier through innovative products. We create great products to solve any problem you may encounter during your work. Our products are specifically designed for small to medium-sized businesses seeking to improve their performance.</p>
-                
                 <div class="contact-cards">
                     <div class="contact-card">
                     <i class="fas fa-phone"></i>
@@ -525,22 +518,6 @@
                 </div>
                 </div>
 
-                <!-- الجزء الثالث: الفورم -->
-                <div class="footer-form">
-                <h3>Contact us</h3>
-                <form id="contactForm" action="https://formsubmit.co/hemaomara11@gmail.com" method="POST">
-                <input type="hidden" name="_subject" value="رسالة جديدة من موقع الشركة">
-                <input type="hidden" name="_captcha" value="false">
-                <input type="hidden" name="_template" value="table">
-
-                <input type="text" name="name" placeholder="Name" required>
-                <input type="tel" name="phone" placeholder="Phone" required>
-                <input type="email" name="email" placeholder="E-mail" required>
-                <textarea name="message" placeholder="Your messages..........!!" required></textarea>
-                <button type="submit">Send</button>
-                </form>
-
-                </div>
             </div>
 
             <div class="footer-social">
@@ -552,7 +529,7 @@
             </div>
 
             <div class="footer-bottom">
-            <p data-translate="copyright">© 2025 <a href="https://www.linkedin.com/in/ibrahem-omara-64b628235/">Ibrahem Omara<a/>. All rights reserved.</p>
+            <p data-translate="copyright">Powerd by NASA Technology © 2024 .</p>
             </div>
     </footer>
 
@@ -565,8 +542,14 @@
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <script>
         AOS.init();
+        window.addEventListener('scroll', function () {
+            const header = document.getElementById('mainHeader');
+            if (window.scrollY > 50) {
+            header.classList.add('scrolled');
+            } else {
+            header.classList.remove('scrolled');
+            }
+        });
     </script>
-
-
 </body>
 </html>
