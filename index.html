@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="homestyle.css">
+    <!-- AOS CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="./images/1.png" type="image/x-icon">
     <title>NASA-TECHNOLOGY</title>
@@ -25,7 +27,7 @@
     <div class="stars-container"></div>
     </div>
 
-    <section class="main">
+    <section class="main" data-aos="fade-up" data-aos-delay="200">
 
         <!-- Canvas for Code Background -->
         <canvas id="codeRain"></canvas>
@@ -45,7 +47,7 @@
             </div>
         </div>
 
-        <div class="about">
+        <div class="about" data-aos="fade-up" data-aos-delay="200">
             <p>We believe that <span>Technology</span></p>
             <p> can change the<span class="world"> world </span></p>
         </div>
@@ -53,8 +55,8 @@
 
 
 
-    <section id="services">
-        <h2 class="title">Services</h2>
+    <section id="services" data-aos="fade-up" data-aos-delay="200">
+        <h2 class="title" >Services</h2>
         <div class="container-fluid h-100 d-flex flex-column">
         <main
             class="flex-grow-1 d-flex align-items-center justify-content-center position-relative"
@@ -317,10 +319,10 @@
     </section>
 
     <section class="project-section" id="projects">
-        <h2 class="title">Our Projects</h2>
+        <h2 class="title" data-aos="fade-up" data-aos-delay="200">Our Projects</h2>
 
         <div class="all-cards">
-            <div class="project-card"
+            <div class="project-card" data-aos="fade-up" data-aos-delay="200"
             onmouseenter="pauseSlider(this)"
             onmouseleave="resumeSliderAndReset(this)"
             onclick="flipCard(this)">
@@ -343,7 +345,7 @@
         </div>
 
 
-        <div class="project-card"
+        <div class="project-card" data-aos="fade-up" data-aos-delay="200"
             onmouseenter="pauseSlider(this)"
             onmouseleave="resumeSliderAndReset(this)"
             onclick="flipCard(this)">
@@ -366,7 +368,7 @@
         </div>
 
 
-        <div class="project-card"
+        <div class="project-card" data-aos="fade-up" data-aos-delay="200"
             onmouseenter="pauseSlider(this)"
             onmouseleave="resumeSliderAndReset(this)"
             onclick="flipCard(this)">
@@ -389,7 +391,7 @@
         </div>
 
 
-        <div class="project-card"
+        <div class="project-card" data-aos="fade-up" data-aos-delay="200"
             onmouseenter="pauseSlider(this)"
             onmouseleave="resumeSliderAndReset(this)"
             onclick="flipCard(this)">
@@ -412,7 +414,7 @@
         </div>
 
 
-                <div class="project-card"
+                <div class="project-card" data-aos="fade-up" data-aos-delay="200"
             onmouseenter="pauseSlider(this)"
             onmouseleave="resumeSliderAndReset(this)"
             onclick="flipCard(this)">
@@ -434,7 +436,7 @@
         </div>
         </div>
 
-        <div class="project-card"
+        <div class="project-card" data-aos="fade-up" data-aos-delay="200"
             onmouseenter="pauseSlider(this)"
             onmouseleave="resumeSliderAndReset(this)"
             onclick="flipCard(this)">
@@ -456,13 +458,14 @@
         </div>
         </div>
         </div>
-        
-
+        <div class="proj-page">
+            <a class="" href="allProjects.html"> Explore Now --> </a>
+        </div>
     </section>
 
 
     <!-- شركاء النجاح  -->
-    <section class="partners-section">
+    <section class="partners-section" data-aos="fade-up" data-aos-delay="300">
             <h2 class="title"data-translate="partenersTitle">Our development partners</h2>
             <p>Hand in hand towards the future</p>
 
@@ -558,6 +561,12 @@
     </script>
     <script src="bg2.js">
     </script>
+    <!-- AOS JS -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
 
 </body>
 </html>

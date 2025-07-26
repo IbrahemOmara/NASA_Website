@@ -1,0 +1,547 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+/* Code Rain Canvas */
+#codeRain {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+}
+
+header{
+
+    width: 100%;
+    position: fixed;
+    z-index: 9999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 100px;
+    top: 0;
+}
+
+
+
+.logo{
+    height:auto;
+}
+
+.logo img{
+    height: 55px;
+    width: 150px;
+    filter: hue-rotate(125deg);
+}
+
+.navigation a{
+    transition: 0.5s;
+    letter-spacing: 4px;
+    text-decoration: none;
+    color: #03e9f4;
+    font-size: .8em;
+    font-weight:500;
+    padding:30px;
+    text-transform: uppercase;
+}
+
+.navigation a:hover{
+            background: #03e9f4;
+            color: #050801;
+            box-shadow: 0 0 5px #03e9f4,
+                0 0 25px #03e9f4,
+                0 0 50px #03e9f4,
+                0 0 200px #03e9f4;
+            -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
+}
+
+section{
+    padding:100px 100px;
+}
+
+    .title {
+        display: flex;
+        justify-content: center;
+        top: -218px;
+        position: relative;
+        font-size: 2.5rem;
+        margin-bottom: 0.5rem;
+        background: linear-gradient(90deg, rgba(0, 229, 255, 0.7), #03e9f4);
+        /*background: linear-gradient(90deg, var(--primary), var(--secondary));*/
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        color: rgb(213 251 255 / 70%);
+        text-shadow: 0 0 15px #00e5ff;
+        /*text-shadow: 0 0 15px rgba(157, 0, 255, 0.5);*/
+        animation: pulse 3s infinite alternate;
+    }
+
+      /* Cosmic Background */
+    .cosmos-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: radial-gradient(
+        ellipse at bottom,
+        #1b2735 0%,
+        #090a0f 100%
+    );
+    overflow: hidden;
+    }
+
+    .stars-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(
+        1px 1px at 25% 25%,
+        white,
+        rgba(0, 0, 0, 0)
+        ),
+        radial-gradient(1px 1px at 50% 50%, white, rgba(0, 0, 0, 0)),
+        radial-gradient(2px 2px at 75% 75%, white, rgba(0, 0, 0, 0)),
+        radial-gradient(2px 2px at 100% 100%, white, rgba(0, 0, 0, 0));
+    background-size: 200px 200px, 300px 300px, 400px 400px, 600px 600px;
+    background-repeat: repeat;
+    animation: twinkle 10s linear infinite;
+    }
+
+    @keyframes twinkle {
+    0% {
+        background-position: 0 0, 0 0, 0 0, 0 0;
+    }
+    100% {
+        background-position: 200px 200px, 300px 300px, 400px 400px,
+        600px 600px;
+    }
+    }
+
+
+/* start projcts sec */
+
+.project-section {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    flex-wrap: wrap;
+    padding: 50px;
+    margin-top: 100px;
+}
+
+.all-cards{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    padding-top: 100px;
+
+}
+
+.project-section .title{
+    text-align: center;
+    top: 0;
+}
+
+.project-card {
+    width: 400px;
+    height: 300px;
+    perspective:1000px;
+    transition: box-shadow 0.4s;
+    transform: translateZ(0);
+    cursor: pointer;
+    min-height: 14em;
+    overflow: hidden;
+    border-radius: 20px;
+    margin: 10px;
+    transition: 0.7s ease;
+}
+
+.project-card:hover {
+    box-shadow: 0 0 5px rgba(0, 255, 255, 0.7),
+                0 0 10px rgba(0, 255, 255, 0.4),
+                0 0 20px rgba(0, 255, 255, 0.2);
+}
+.project-card:hover{
+    transform: scale(1.05); 
+    border: none;
+    z-index: 999;
+}
+
+
+.project-card-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: transform 0.6s ease-in-out;
+    transform-style: preserve-3d;
+    will-change: transform;
+}
+
+.project-card.flipped .project-card-inner {
+    transform: rotateY(180deg);
+}
+
+.project-card-front,
+.project-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    overflow: hidden;
+    backface-visibility: hidden;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    will-change: transform, opacity;
+}
+
+.project-card-front {
+    background: #fff;
+    z-index: 2;
+}
+
+.project-card-back {
+    background: #222;
+    color: #fff;
+    transform: rotateY(180deg);
+    padding: 20px;
+}
+
+.project-slider {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.project-slide {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    border-radius: 15px;
+}
+
+.project-slide.active {
+    opacity: 1;
+}
+
+/* end of project sec */
+
+/*------------ شركاء النجاح -------------*/
+.partners-section {
+
+    padding: 50px 0px;
+    padding-top: 300px;
+    overflow: hidden;
+}
+.partners-section h2{
+    margin: 0;
+
+}
+.partners-section p{
+    margin: 10px;
+    color: #ffff;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.partners-wrapper {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.partners-track {
+    
+    display: flex;
+    width: fit-content;
+    animation: scrollLoop 50s linear infinite;
+}
+.partners-track:hover {
+    animation-play-state: paused;
+}
+
+.logo-group {
+    display: flex;
+}
+.partners-section .title{
+    top: 0;
+    color: #fff;
+    font-size: 1.5em;
+}
+.logo-group img {
+    max-width: 150px;
+    height: 100px;
+    margin: 0 40px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+@keyframes scrollLoop {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+
+/* نهايه سليدر شركاء النجاح*/
+
+
+
+.footer {
+    background-color: rgb(1 115 127 / 25%);
+    color: rgb(247 247 247);
+    padding: 50px 0 20px;
+    font-family: 'Arial', sans-serif;
+    text-align: left;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+    align-items: center;
+    flex-direction: row;
+    padding: 10px;
+}
+
+.footer-logo img {
+    height: 150px;
+    width: 300px;
+    filter: hue-rotate(125deg);
+}
+
+.footer-about, .footer-form {
+    flex: 1;
+    min-width: 250px;
+}
+
+.footer-about h3, .footer-form h3 {
+    margin-bottom: 15px;
+}
+
+.footer-about p {
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.contact-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-card {
+    background-color:rgba(0, 229, 255, 0.5);;
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.contact-card i {
+    font-size: 20px;
+    color: #012e41;
+}
+
+.contact-card:hover {
+    transform: translateY(-5px) scale(1.02);
+    background-color: #03e9f4;
+    color: #012e41;
+}
+
+.contact-card:hover i {
+    color: #bb0404;
+}
+
+.footer-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.footer-form input, .footer-form textarea {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    font-size: 16px;
+}
+
+.footer-form textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.footer-form button {
+    padding: 12px;
+    background-color: #07658d;
+    color: #222;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.footer-form button:hover {
+    background-color: #03e9f4;
+}
+
+.footer-social {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.social-links a {
+    color: #07658d;
+    margin: 0 10px;
+    font-size: 20px;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #03e9f4;
+}
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    margin-top: 30px;
+    border-top: 1px solid #ffffff33;
+    font-size: 0.9em;
+    color: #ccc;
+}
+
+.footer-bottom a{
+    text-decoration: none;
+    color: #cccccc;
+}
+
+
+
+/* ---------------- Responsive Design ---------------- */
+
+/* الأجهزة التابلت (شاشة أقل من 992px) */
+@media (max-width: 992px) {
+header {
+    padding: 10px 40px;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.content-box .text h1 {
+    font-size: 1rem;
+}
+.content-box .text p{
+    font-size: .8rem;
+}
+
+.nav-links {
+    flex-direction: column;
+    align-items: center;
+}
+
+.content-box,
+.content-box.two {
+    text-align: center;
+}
+
+.content-box img {
+    width: 90%;
+    height: auto;
+}
+
+.text-side,
+.cards-grid {
+    min-width: 100%;
+}
+
+.collection-grid {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.feature-card {
+    flex-direction: column;
+    text-align: center;
+}
+
+.feature-text {
+    padding-left: 0;
+}
+
+.logo-group img {
+    height: 120px;
+    margin: 0 20px;
+}
+}
+
+@media (max-width:1023px){
+    header{
+        padding: 12px 20px;
+    }
+
+    .navigation a{
+        padding-left: 10px;
+    }
+
+    .title{
+        font-size: 1.8em;
+    }
+
+    section{
+        padding: 80px 20px;
+    }
+
+    .main-content h2{
+        font-size: 1em;
+    }
+
+    .main-content h3{
+        font-size: 1.6em;
+    }
+
+    .content{
+        flex-direction: column;
+        align-items: center;
+    }
+
+}
+
+@media (max-width:641px){
+    body{
+        font-size: 12px;
+    }
+
+    .main-content h2{
+        font-size: 0.8em;
+    }
+
+    .main-content h3{
+        font-size: 1.4em;
+    }
+}
+
+@media (max-width:300px){
+    body{
+        font-size: 10px;
+    
+    }
+}
