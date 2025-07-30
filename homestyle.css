@@ -5,6 +5,15 @@
     box-sizing: border-box;
     scroll-behavior: smooth;
 }
+
+/*stop scrolling x axis */
+/*html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+    font-family: Arial, sans-serif;
+}*/
 /* Code Rain Canvas */
 #codeRain {
     position: absolute;
@@ -570,7 +579,7 @@ section{
     }
 
     .memory-preview {
-    font-size: 0.5rem;
+    font-size: 0.8rem;
     color: var(--text-secondary);
     margin-bottom: 15px;
     flex-grow: 1;
@@ -578,7 +587,7 @@ section{
 
     .memory-preview span{
         color: hwb(0 100% 0%);
-        font-size: 0.7rem;
+        font-size: 0.9rem;
     }
 
     .card-back .card-content p {
@@ -951,6 +960,7 @@ section{
 
 
 .footer-about{
+    display: flex;
     flex: 1;
     min-width: 250px;
 }
@@ -966,17 +976,19 @@ section{
 
 .contact-cards {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 15px;
+    gap: 5px;
+    flex: 1;
 }
 
 .contact-card {
+    width: auto;
+    min-width: 50%;
     background-color:rgba(0, 229, 255, 0.5);;
     color: white;
-    padding: 15px;
-    height: 70px;
+    padding: 5px;
     border-radius: 10px;
     display: flex;
     align-items: center;
@@ -989,7 +1001,10 @@ section{
     font-size: 20px;
     color: #012e41;
 }
-
+.tools{
+    padding: 10px;
+    margin-left: 20px;
+}
 .contact-card:hover {
     transform: translateY(-5px) scale(1.02);
     background-color: #03e9f4;
@@ -1215,6 +1230,18 @@ header {
         align-items: center;
         gap: 30px;
     }
+    .card-content h3{
+        font-size: 1.2em;
+    }
+
+    .card-back .card-content h3{
+        font-size: .9em;
+    }
+
+    .card-back .card-content p{
+        font-size: .7em;
+        margin-bottom: 5px;
+    }
 
 
 }
@@ -1223,11 +1250,21 @@ header {
     body {
         font-size: 14px;
     }
+    
     .title {
         font-size: 1.5em;
     }
     .project-card {
         height: 200px;
+    }
+
+        .card-back .card-content h3{
+        font-size: .9em;
+    }
+
+    .card-back .card-content p{
+        font-size: .6em;
+        margin-bottom: 5px;
     }
 }
 /* Responsive project cards */
@@ -1273,6 +1310,7 @@ header {
   .footer-about, .footer-form {
     min-width: 100%;
     padding: 10px;
+    flex-direction: column;
   }
 
   .contact-cards {

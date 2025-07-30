@@ -527,6 +527,12 @@ header {
     .main-content h3{
         font-size: 1.4em;
     }
+    .contact-cards{
+        flex-direction: column;
+    }
+    .contact-card{
+        width: 70%;
+    }
 }
 
 @media (max-width:300px){
